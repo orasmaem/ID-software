@@ -4,7 +4,7 @@ On August 20th 2025, RIA released the version 25.8 of the DigiDoc4 software. The
 As my thesis in I am analysing this update and trying to come up with a Proof of Concept exploit.
 Thus far I have managed to exploit it to the point, to where in a signed ASiCE container, the document to which the signature was given, can be modified or replaced, without changing the validity seen in the DigiDoc4 appication.
 
-Below is a description, of how this was achieved in x steps:
+Below is a description, of how this was achieved in the following steps, using the files in this repo and assuming you are using Windows to test out the .exe files:
 
 1. Assume that you have a digitally signed container, in our case let that container be original.asice, which was signed by me and contains the file original.txt
 <img width="1918" height="1120" alt="image" src="https://github.com/user-attachments/assets/834d1679-aaf8-4c1f-a196-997fdbe53f99" />
