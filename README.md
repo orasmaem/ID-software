@@ -9,6 +9,9 @@ Below is a description, of how this was achieved in x steps:
 1. Assume that you have a digitally signed container, in our case let that container be original.asice, which was signed by me and contains the file original.txt
 <img width="1918" height="1120" alt="image" src="https://github.com/user-attachments/assets/834d1679-aaf8-4c1f-a196-997fdbe53f99" />
 
+<img width="1915" height="1128" alt="image" src="https://github.com/user-attachments/assets/dd83e01a-1d8e-46c4-a073-38a9827f546d" />
+
+
 2. This container can be unpacked into the following files using the unpack_asice.py script:
  ~~~text
 \original.txt
@@ -17,12 +20,12 @@ Below is a description, of how this was achieved in x steps:
 \META-INF\signatures0.xml
  ~~~
 
-3. The exploit lies in the fact that anyone could open the signatures0.xml file in a text editor and replace all the following elements with empty strings:
+3. The exploit lies in the fact that anyone could open the signatures0.xml file in a text editor and replace all the following elements with empty or modified strings:
 * ds:CanonicalizationMethod Algorithm=
 * ds:SignatureMethod Algorithm=
 * ds:DigestMethod Algorithm=
 
-And also empty out all the <ds:DigestValue></ds:DigestValue> elements in the signature
+And also empty out or modify all the <ds:DigestValue></ds:DigestValue> elements in the signature
 
 This modification passed the validation checks, because the higher level validation methods expected the exceptions thrown in the lower levels to have an e.cause(), which they did not. So with the update this vulnerability was fixed.
 
@@ -30,6 +33,10 @@ This modification passed the validation checks, because the higher level validat
 
 5. After changing all these values, the attacker can repack the container with repack_asice.py, and it will still be valid in the 25.5/25.6 version of the software.
 
-   <img width="1914" height="1122" alt="image" src="https://github.com/user-attachments/assets/2be68008-1763-4dc0-a6a4-a76eef05e30a" />
+<img width="1914" height="1122" alt="image" src="https://github.com/user-attachments/assets/2be68008-1763-4dc0-a6a4-a76eef05e30a" />
 
+On the below image the user could notice, that the Signature method is missing due to an empty string
 
+<img width="1917" height="1129" alt="image" src="https://github.com/user-attachments/assets/9b646541-0c18-45c1-ac49-93ac918be56e" />
+
+But this can be "fixed" by just simply replacing the 
