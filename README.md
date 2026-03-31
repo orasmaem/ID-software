@@ -39,4 +39,9 @@ On the below image the user could notice, that the Signature method is missing d
 
 <img width="1917" height="1129" alt="image" src="https://github.com/user-attachments/assets/9b646541-0c18-45c1-ac49-93ac918be56e" />
 
-But this can be "fixed" by just simply replacing the 
+But this can be "fixed" by just simply replacing the ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsigEXPLOIT" or any other value with the prefix "http://www.w3.org/2001/04/xmldsig"
+
+<img width="1918" height="1128" alt="image" src="https://github.com/user-attachments/assets/08a47199-b0a8-4d5c-8ae1-970aa1391806" />
+
+So all values that are visible to the regular user remain the same, while the signed document was changed.
+
