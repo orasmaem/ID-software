@@ -1,5 +1,5 @@
 This repository contains a Proof of Concept exploit of the Estonian ID software DigiDoc4 version 25.5/25.6
-On August 20th 2025, RIA released the version 25.8 of the DigiDoc4 software. The release notes of this update mentioned "Improved digital signature validation" as a major change (https://www.id.ee/en/article/id-software-versions-info-release-notes/). This poses the question: "What was improved and what could have been the initiator for the update?"
+On August 20th 2025, RIA released the version 25.8 of the DigiDoc4 software. The release notes of this update mentioned "Improved digital signature validation" as a major change (https://www.id.ee/en/article/id-software-versions-info-release-notes/). This poses the question: "What was improved and what could have been wrong prior to the update?"
 
 As my final thesis in I am analysing this update and trying to come up with a Proof of Concept exploit.
 Thus far I have managed to exploit it to the point, to where in a signed ASiCE container, the document to which the signature was given, can be modified or replaced, without changing the validity seen in the DigiDoc4 appication.
