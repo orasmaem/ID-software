@@ -1,0 +1,4 @@
+mimetype
+id-junior-security-engineer-2026.pdf
+META-INF/manifest.xml
+META-INF/signatures0.xml
