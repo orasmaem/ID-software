@@ -46,7 +46,7 @@ But this can be "fixed" by just simply replacing the ds:SignatureMethod Algorith
 So all values that are visible to the regular user remain the same, while the signed document was changed.
 
 
-Below are screenshots that successfully display the modified container as having an invalid signature:
+Below are screenshots that successfully display the modified container as having an invalid signature in the updated version:
 
 <img width="1918" height="1126" alt="image" src="https://github.com/user-attachments/assets/22769ded-6825-40c3-b102-f4e20cfdda46" />
 
